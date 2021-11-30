@@ -1,42 +1,82 @@
-//chamar o elemento a ser clicado (disco) e o que vai ser selecionado (vareta)
-//usar o event listener para identificar o clique (tanto no disco, quanto na torre)
 
-//disco
-let disc1 = document.getElementById('disco1');
-let disc2 = document.getElementById('disco2');
-let disc3 = document.getElementById('disco3');
-let disc4 = document.getElementById('disco4');
-//vareta
-let torre1 = document.getElementById('torre1')
-let torre2 = document.getElementById('torre2')
-let torre3 = document.getElementById('torre3')
+/* INICIO DOM */
+let midSection = document.getElementById('middle');
 
-function selectedDisc(event) {
-    const clicked = event.currentTarget;
+let divTorre1 = document.createElement('div');
+let divTorre2 = document.createElement('div');
+let divTorre3 = document.createElement('div');
+let disc1 = document.createElement('div');
+let disc2 = document.createElement('div');
+let disc3 = document.createElement('div');
+let disc4 = document.createElement('div');
 
-    if (clicked.tagName == 'DIV') {
-        clicked.classList.toggle('selecionado-disco')
-    }
-}
+disc1.setAttribute('id', '4');
+disc1.setAttribute('class', 'disco disco-vermelho');
 
-function selectedVareta(event) {
-    const selectedTorre = event.target;
+disc2.setAttribute('id', '3');
+disc2.setAttribute('class', 'disco disco-verde');
 
-    if (selectedTorre.tagName == 'DIV') {
-        selectedTorre.classList.toggle('selecionado-vareta')
-    }
-}
+disc3.setAttribute('id', '2');
+disc3.setAttribute('class', 'disco disco-azul');
 
-disc1.addEventListener('click', selectedDisc);
-disc2.addEventListener('click', selectedDisc);
-disc3.addEventListener('click', selectedDisc);
-disc4.addEventListener('click', selectedDisc);
+disc4.setAttribute('id', '1');
+disc4.setAttribute('class', 'disco disco-roxo');
 
-torre1.addEventListener('click', selectedVareta)
-torre2.addEventListener('click', selectedVareta)
-torre3.addEventListener('click', selectedVareta)
+divTorre1.setAttribute('id', 'torre1');
+divTorre1.setAttribute('class', 'torre torre1');
+
+divTorre2.setAttribute('id', 'torre1');
+divTorre2.setAttribute('class', 'torre torre1');
+
+divTorre3.setAttribute('id', 'torre1');
+divTorre3.setAttribute('class', 'torre torre1');
 
 
-function torres(torre1, torre2, torre3) {
+divTorre1.appendChild(disc1);
+divTorre1.appendChild(disc2);
+divTorre1.appendChild(disc3);
+divTorre1.appendChild(disc4);
 
-}
+midSection.appendChild(divTorre1);
+midSection.appendChild(divTorre2);
+midSection.appendChild(divTorre3);
+/* FIM DOM */
+
+
+
+//SELECIONANDO OS ALVOS
+
+// //disco
+// let getDisc1 = document.getElementById('4');
+// let getDisc2 = document.getElementById('3');
+// let getDisc3 = document.getElementById('2');
+// let getDisc4 = document.getElementById('1');
+// //vareta
+// let getTorre1 = document.getElementById('torre1')
+// let getTorre2 = document.getElementById('torre2')
+// let getTorre3 = document.getElementById('torre3')
+
+// function selectedDisc(event) {
+//     const clicked = event.currentTarget;
+
+//     if (clicked.tagName == 'DIV') {
+//         clicked.classList.toggle('selecionado-disco')
+//     }
+// }
+
+// function selectedVareta(event) {
+//     const selectedTorre = event.target;
+
+//     if (selectedTorre.className == 'TORRE') {
+//         selectedTorre.classList.toggle('selecionado-vareta')
+//     }
+// }
+
+// getDisc1.addEventListener('click', selectedDisc);
+// getDisc2.addEventListener('click', selectedDisc);
+// getDisc3.addEventListener('click', selectedDisc);
+// getDisc4.addEventListener('click', selectedDisc);
+
+// getTorre1.addEventListener('click', selectedVareta)
+// getTorre2.addEventListener('click', selectedVareta)
+// getTorre3.addEventListener('click', selectedVareta)
