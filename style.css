@@ -31,23 +31,24 @@ main {
 /*  */
 .disco {
     border: 1px solid black;
+    border-radius: 10px;
     height: 10%;
     cursor: move;
 }
 .disco-vermelho{
-    width: 140px;
+    width: 100px;
     background-color: red;
 }
 .disco-verde{
-    width: 110px;
+    width: 80px;
     background-color: green;
 }
 .disco-azul{
-    width: 80px;
+    width: 60px;
     background-color: blue;
 }
 .disco-roxo{
-    width: 50px;
+    width: 40px;
     background-color: purple;
 }
 .selecionado-disco {
@@ -57,4 +58,59 @@ main {
 .selecionado-vareta {
     transform: scale(1.2);
     border: 1px solid white;
+}
+
+
+/* MEDIA QUERIES*/
+@media (min-width: 550px){
+    .disco-vermelho{
+        width: 120px;
+    }
+    .disco-verde{
+        width: 90px;
+    }
+    .disco-azul{
+        width: 60px;
+    }
+    .disco-roxo{
+        width: 40px;
+    }
+}
+
+@media (min-width: 800px){
+    .middle {
+        width: 98%;
+        height: 50%;
+    }
+    .disco-vermelho{
+        width: 180px;
+    }
+    .disco-verde{
+        width: 150px;
+    }
+    .disco-azul{
+        width: 120px;
+    }
+    .disco-roxo{
+        width: 90px;
+    }
+}
+
+@media (min-width: 1300px){
+    .middle {
+        width: 85%;
+        height: 60%;
+    }
+    .disco-vermelho{
+        width: 280px;
+    }
+    .disco-verde{
+        width: 200px;
+    }
+    .disco-azul{
+        width: 150px;
+    }
+    .disco-roxo{
+        width: 100px;
+    }
 }
