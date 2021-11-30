@@ -33,8 +33,8 @@ divTorre3.setAttribute('class', 'torre torre3');
 
 
 divTorre1.appendChild(disc1);
-divTorre1.appendChild(disc2);
-divTorre1.appendChild(disc3);
+divTorre2.appendChild(disc2);
+divTorre3.appendChild(disc3);
 divTorre1.appendChild(disc4);
 
 midSection.appendChild(divTorre1);
@@ -42,46 +42,82 @@ midSection.appendChild(divTorre2);
 midSection.appendChild(divTorre3);
 /* FIM DOM */
 
+// CONDIÇÃO DE VITORIA - COMEÇO - falta testar
+let getMain = document.getElementById('main')
+if(divTorre1.childElementCount === 2){
+    let msgVitoria = document.createElement('span');
+    let btnReset = document.createElement('button');
 
+    btnReset.textContent = "Recomeçar";
+    msgVitoria.innerText = "Parabéns, você ganhou!";
 
+    msgVitoria.setAttribute('class','vitoria');
+    btnReset.setAttribute('class','btnReset');
+    btnReset.setAttribute('id','btnReset')
 
+    getMain.appendChild(msgVitoria);
+    getMain.appendChild(btnReset);
+}
+//CONDIÇÃO DE VITORIA - FIM
 
-
-
-
-//SELECIONANDO OS ALVOS
-
-//disco
-let getDisc1 = document.getElementById('4');
-let getDisc2 = document.getElementById('3');
-let getDisc3 = document.getElementById('2');
-let getDisc4 = document.getElementById('1');
-//vareta
-let getTorre1 = document.getElementById('torre1')
-let getTorre2 = document.getElementById('torre2')
-let getTorre3 = document.getElementById('torre3')
-
-function selectedDisc(event) {
-    const clicked = event.currentTarget;
-
-    if (clicked.tagName == 'DIV') {
-        clicked.classList.toggle('selecionado-disco')
+// COMEÇO BOTAO RESETAR - já funcional
+let btn = document.getElementById('btnReset')
+function btnResetar(event){
+    const reset = event.target;
+    if(reset.tagName == 'BUTTON'){
+        divTorre1.appendChild(disc1);
+        divTorre1.appendChild(disc2);
+        divTorre1.appendChild(disc3);
+        divTorre1.appendChild(disc4);
     }
 }
+btn.addEventListener('click', btnResetar);
+//FIM BOTAO RESETAR
 
-function selectedVareta(event) {
-    const selectedTorre = event.target;
-}
 
-function whichTower(t1, t2, t3){
 
-}
 
-getDisc1.addEventListener('click', selectedDisc);
-getDisc2.addEventListener('click', selectedDisc);
-getDisc3.addEventListener('click', selectedDisc);
-getDisc4.addEventListener('click', selectedDisc);
 
-getTorre1.addEventListener('click', selectedVareta)
-getTorre2.addEventListener('click', selectedVareta)
-getTorre3.addEventListener('click', selectedVareta)
+
+
+
+
+
+
+
+
+// //SELECIONANDO OS ALVOS
+
+// //disco
+// let getDisc1 = document.getElementById('4');
+// let getDisc2 = document.getElementById('3');
+// let getDisc3 = document.getElementById('2');
+// let getDisc4 = document.getElementById('1');
+// //vareta
+// let getTorre1 = document.getElementById('torre1')
+// let getTorre2 = document.getElementById('torre2')
+// let getTorre3 = document.getElementById('torre3')
+
+// function selectedDisc(event) {
+//     const clicked = event.target; // capturo o clique
+//     let id = Number(event.target.id);//capturo o ID do disco clicado
+
+//     if (clicked.tagName == 'DIV') {
+//         clicked.classList.toggle('selecionado-disco');
+//     }
+
+// }
+
+// function selectedVareta(event) {
+//     const selectedTorre = event.currentTarget;
+//     let quantos = selectedTorre.childElementCount; // retorna quantos elementos tem na vareta
+// }
+
+// getDisc1.addEventListener('click', selectedDisc);
+// getDisc2.addEventListener('click', selectedDisc);
+// getDisc3.addEventListener('click', selectedDisc);
+// getDisc4.addEventListener('click', selectedDisc);
+
+// getTorre1.addEventListener('click', selectedVareta)
+// getTorre2.addEventListener('click', selectedVareta)
+// getTorre3.addEventListener('click', selectedVareta)
