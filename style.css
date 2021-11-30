@@ -56,7 +56,11 @@ main {
     width: 50px;
     background-color: purple;
 }
-.selecionado {
-    transform: scale(1.1);
+.selecionado-disco {
+    transform: scale(1.3);
     border: 2px solid white;
+}
+.selecionado-vareta {
+    transform: scale(1.2);
+    border: 1px solid white;
 }
