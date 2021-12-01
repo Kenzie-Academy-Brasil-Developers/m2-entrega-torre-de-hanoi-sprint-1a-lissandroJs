@@ -1,15 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 body {
+    background-color: black;
     width: 100%;
     height: 100vh;
 }
 
 main {
     display: flex;
-    justify-content: center;
+    
     align-items: center;
+    flex-direction: column;
     width: 100%;
     height: 100%;
-    background-color: black;
+    
+}
+
+main .vitoria {
+    z-index: 2;
+    position:absolute;
+   font-size: 22px;
+    font-size: 25px;
+    color: rgb(81, 163, 13);
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+main .btnReset {
+    position:absolute;
+    margin-top: 500px;
+    border: none;
+    background-color: rgb(138, 134, 134);
+    color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.btnReset:hover {
+    background-color: aliceblue;
+    color: rgb(34, 30, 30);
+    transition: all .5s ease;
 }
 
 .middle {
@@ -19,6 +54,7 @@ main {
     width: 98%;
     height: 30%;
     background-color: rgb(138, 134, 134);
+    margin: 50px;
 }
 .torre {
     border: 2px solid red;
@@ -28,13 +64,14 @@ main {
     height: 75%;
     width: 15px;
     background-color: black;
+    cursor: pointer;
 }
 /*  */
 .disco {
     border: 1px solid black;
     border-radius: 10px;
     height: 10%;
-    cursor: move;
+    cursor: pointer;
 }
 .disco-vermelho{
     width: 100px;
@@ -71,8 +108,23 @@ main {
     flex-direction: column;
 }
 
+p{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
 /* MEDIA QUERIES*/
 @media (min-width: 550px){
+    main .vitoria h1{
+        font-size: 32px;
+    }
+    main .vitoria {
+        margin-top: 0;
+    }
+    main .btnReset {
+        margin-top: 420px;
+    }
     .disco-vermelho{
         width: 120px;
     }
@@ -88,6 +140,16 @@ main {
 }
 
 @media (min-width: 800px){
+    main .vitoria h1{
+        font-size: 32px;
+    }
+    main .vitoria {
+        margin-top: 20px;
+        
+    }
+    main .btnReset {
+        margin-top: 620px;
+    }
     .middle {
         width: 98%;
         height: 50%;
@@ -107,6 +169,16 @@ main {
 }
 
 @media (min-width: 1300px){
+    main .vitoria h1{
+        font-size: 32px;
+    }
+    main .vitoria {
+        margin-top: 20px;
+        
+    }
+    main .btnReset {
+        margin-top: 720px;
+    }
     .middle {
         width: 85%;
         height: 60%;
@@ -122,5 +194,15 @@ main {
     }
     .disco-roxo{
         width: 100px;
+    }
+}
+@media (min-width: 200px){
+    main .vitoria {
+        margin-top: 20px;
+        
+    }
+    main .vitoria {
+        font-size: 18px;
+        
     }
 }
