@@ -21,6 +21,7 @@ main {
     background-color: rgb(138, 134, 134);
 }
 .torre {
+    border: 2px solid red;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
@@ -60,6 +61,15 @@ main {
     border: 1px solid white;
 }
 
+.suporte{
+    width: 100px;
+    height: 100%;
+    background-color: salmon;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
 
 /* MEDIA QUERIES*/
 @media (min-width: 550px){
