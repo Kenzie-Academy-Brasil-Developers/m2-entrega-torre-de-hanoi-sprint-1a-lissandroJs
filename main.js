@@ -140,103 +140,17 @@ btnReset.setAttribute('id', 'btnReset')
 btnReset.textContent = "Recomeçar";
 
 getMain.appendChild(btnReset);
-const btn = document.getElementById('btnReset') //Usada para chamar o botão de reset criado - linha 132
+const btn = document.getElementById('btnReset')
 
 
 function btnResetar(event) {
     const reset = event.target;
-    // if(reset.tagName == 'BUTTON' && )
     if (reset.tagName == 'BUTTON') 
     {
         divTorre1.appendChild(disk1);
         divTorre1.appendChild(disk2);
         divTorre1.appendChild(disk3);
         divTorre1.appendChild(disk4);
-        // if(WinMsg.value !== ""){
-        //     WinMsg.innerText = "";
-        // }
     }
 }
 btn.addEventListener('click', btnResetar);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// //SELECIONANDO OS ALVOS
-
-// //vareta
-// let getTorre1 = document.getElementById('torre1');
-// let getTorre2 = document.getElementById('torre2');
-// let getTorre3 = document.getElementById('torre3');
-
-// function selectedVareta(event) {
-//     const selectedTorre = event.currentTarget; // armazeno qual torre foi clicada
-//     let quantos = selectedTorre.childElementCount; // retorna quantos elementos tem na vareta
-//     let count = selectedTorre.lastElementChild; //pega o elemento de cima da torre
-//     let width = count.clientWidth; //pega o tamanho do elemento armazenado em count
-//     moveTower(event)
-// }
-// function moveTower(event){
-
-
-// }
-
-
-// getTorre1.addEventListener('click', selectedVareta)
-// getTorre2.addEventListener('click', selectedVareta)
-// getTorre3.addEventListener('click', selectedVareta)
-
-// getTorre1.addEventListener('click', moveTower)
-// getTorre2.addEventListener('click', moveTower)
-// getTorre3.addEventListener('click', moveTower)
