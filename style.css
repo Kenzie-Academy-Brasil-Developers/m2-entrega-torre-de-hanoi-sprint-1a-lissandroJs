@@ -22,6 +22,8 @@ main {
 }
 
 main .vitoria {
+    position:absolute;
+    margin-top: 400px;
     font-size: 25px;
     color: rgb(138, 134, 134);
     text-transform: uppercase;
@@ -30,6 +32,8 @@ main .vitoria {
 }
 
 main .btnReset {
+    position:absolute;
+    margin-top: 500px;
     border: none;
     background-color: rgb(138, 134, 134);
     color: whitesmoke;
@@ -99,6 +103,12 @@ main .btnReset {
 
 /* MEDIA QUERIES*/
 @media (min-width: 550px){
+    main .vitoria {
+        margin-top: 400px;
+    }
+    main .btnReset {
+        margin-top: 500px;
+    }
     .disco-vermelho{
         width: 120px;
     }
@@ -114,6 +124,12 @@ main .btnReset {
 }
 
 @media (min-width: 800px){
+    main .vitoria {
+        margin-top: 500px;
+    }
+    main .btnReset {
+        margin-top: 600px;
+    }
     .middle {
         width: 98%;
         height: 50%;
@@ -133,6 +149,12 @@ main .btnReset {
 }
 
 @media (min-width: 1300px){
+    main .vitoria {
+        margin-top: 600px;
+    }
+    main .btnReset {
+        margin-top: 700px;
+    }
     .middle {
         width: 85%;
         height: 60%;
